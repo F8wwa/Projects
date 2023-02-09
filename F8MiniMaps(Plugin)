@@ -1,6 +1,8 @@
 -- Neste arquivo você encotrara recursos adicionais para o plugin (F8MiniMaps)
 -- Template + Atualizada
 
+print("Carregado!")
+
 local GitHubResourcesValue = script.Parent.Parent.Parent["F8MiniMaps(Plugin)"].GitHubResources
 
 local funciton RecentTemplate()
