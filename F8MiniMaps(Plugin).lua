@@ -8,5 +8,5 @@ local funciton RecentTemplate()
 end
 
 if GitHubResourcesValue == "Template" then
-  
+  print("TemplateAtualizada foi utilizada!")
 end
