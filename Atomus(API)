@@ -1,5 +1,6 @@
 --Please do not make any changes and republish.
 --In this file you have Atomus(API)
+print("Atomus(API) has been loaded.")
 
 --Verification()
 
