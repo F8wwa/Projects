@@ -19,19 +19,19 @@ if v:IsA("Folder") then
             local APIDir = v:GetAttribute("Core"):gsub("/","."):gsub("File", "v")
 
             if v:FindFirstChild(CoreDir) then
-            else return ErrorI(CoreDir)
+            else ErrorI(CoreDir) return
             end
             if v:FindFirstChild(Core1Dir) then
-            else return ErrorI(Core1Dir)
+            else ErrorI(Core1Dir) return
             end  
             if v:FindFirstChild(Core2Dir) then
-            else return ErrorI(Core2Dir)
+            else ErrorI(Core2Dir) return
             end  
             if v:FindFirstChild(ResourcesDir) then
-            else return ErrorI(ResourcesDir)
+            else ErrorI(ResourcesDir) return 
             end
             if v:FindFirstChild(APIDir) then
-            else return ErrorI(APIDir)
+            else ErrorI(APIDir) return 
             end  
         end
     end
