@@ -10,6 +10,10 @@ local function ErrorI(Dir)
     print("Model to be used in attributes: [Name: Folder name]/[Value: Directory of folder separated with '/']. Ex: (Core) = (script.Core).")
 end
 
+local function ErroI3()
+    print("The Possible 'Atomus' folder has not spefication of 'FileIs', please correct the error and try again.")
+end
+
 for i,v in pairs(game:GetDescendants()) do
 if v:IsA("Folder") then
     if v:GetAttribute("FileIs") and v:GetAttribute("Core") and v:GetAttribute("Core1") and v:GetAttribute("Core2") and v:GetAttribute("Resources") and v:GetAttribute("API") then
@@ -34,7 +38,9 @@ if v:IsA("Folder") then
             end
             if v:FindFirstChild(APIDir) then
             else ErrorI(APIDir) return 
-            end  
+            end
+        else
+            ErroI3()
         end
     end
 end
