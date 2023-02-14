@@ -2,7 +2,41 @@
 --In this file you have Atomus(API)
 
 --Verification()
-for i,v in pairs(game)
+
+local HasBeenVerificate
+local function ErrorI(Dir)
+    print("Dir has been not find:"..Dir)
+end
+
+for i,v in pairs(game:GetDescendants()) do
+if v:IsA("Folder") then
+    if v:HasProperty("FileIs") and v:HasProperty("Core") and v:HasProperty("Core1") and v:HasProperty("Core2") and v:HasProperty("Resources") and v:HasProperty("API") then
+        if v:GetProperty() == "AtomusFolder" then
+            local CoreDir = v:GetProperty("Core"):gsub("/",".")
+            local Core1Dir = v:GetProperty("Core1"):gsub("/",".")
+            local Core2Dir = v:GetProperty("Core2"):gsub("/",".")
+            local ResourcesDir = v:GetProperty("Resources"):gsub("/",".")
+            local APIDir = v:GetProperty("Core"):gsub("/",".")
+
+            if v:FindFirstChild(CoreDir) then
+            else return ErrorI(CoreDir)
+            end
+            if v:FindFirstChild(Core1Dir) then
+            else return ErrorI(Core1Dir)
+            end  
+            if v:FindFirstChild(Core2Dir) then
+            else return ErrorI(Core2Dir)
+            end  
+            if v:FindFirstChild(ResourcesDir) then
+            else return ErrorI(ResourcesDir)
+            end
+            if v:FindFirstChild(APIDir) then
+            else return ErrorI(APIDir)
+            end  
+        end
+    end
+end
+end
 
 
 --Resources()
