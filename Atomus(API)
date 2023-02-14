@@ -12,11 +12,11 @@ for i,v in pairs(game:GetDescendants()) do
 if v:IsA("Folder") then
     if v:GetAttribute("FileIs") and v:GetAttribute("Core") and v:GetAttribute("Core1") and v:GetAttribute("Core2") and v:GetAttribute("Resources") and v:GetAttribute("API") then
         if v:GetAttribute() == "AtomusFolder" then
-            local CoreDir = v:GetProperty("Core"):gsub("/",".")
-            local Core1Dir = v:GetProperty("Core1"):gsub("/",".")
-            local Core2Dir = v:GetProperty("Core2"):gsub("/",".")
-            local ResourcesDir = v:GetProperty("Resources"):gsub("/",".")
-            local APIDir = v:GetProperty("Core"):gsub("/",".")
+            local CoreDir = v:GetAttribute("Core"):gsub("/",".")
+            local Core1Dir = v:GetAttribute("Core1"):gsub("/",".")
+            local Core2Dir = v:GetAttribute("Core2"):gsub("/",".")
+            local ResourcesDir = v:GetAttribute("Resources"):gsub("/",".")
+            local APIDir = v:GetAttribute("Core"):gsub("/",".")
 
             if v:FindFirstChild(CoreDir) then
             else return ErrorI(CoreDir)
