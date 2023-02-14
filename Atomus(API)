@@ -5,7 +5,7 @@
 
 local HasBeenVerificate
 local function ErrorI(Dir)
-    print("Dir has been not find:"..Dir)
+    print("Dir has been not find: "..Dir)
 end
 
 for i,v in pairs(game:GetDescendants()) do
@@ -13,10 +13,15 @@ if v:IsA("Folder") then
     if v:GetAttribute("FileIs") and v:GetAttribute("Core") and v:GetAttribute("Core1") and v:GetAttribute("Core2") and v:GetAttribute("Resources") and v:GetAttribute("API") then
         if v:GetAttribute("FileIs") == "AtomusFolder" then
             local CoreDir = v:GetAttribute("Core"):gsub("/",".")
+            CoreDir:gsub("File", "script")
             local Core1Dir = v:GetAttribute("Core1"):gsub("/",".")
+            Core1Dir:gsub("File", "script")
             local Core2Dir = v:GetAttribute("Core2"):gsub("/",".")
+            Core2Dir:gsub("File", "script")
             local ResourcesDir = v:GetAttribute("Resources"):gsub("/",".")
+            ResourcesDir:gsub("File", "script")
             local APIDir = v:GetAttribute("Core"):gsub("/",".")
+            APIDir:gsub("File", "script")
 
             if v:FindFirstChild(CoreDir) then
             else return ErrorI(CoreDir)
