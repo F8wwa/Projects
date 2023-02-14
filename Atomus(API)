@@ -7,7 +7,7 @@ local HasBeenVerificate
 local function ErrorI(Dir)
     print("Dir has been not find: "..Dir)
     print("This error occurred because some attribute has an incorrect value in the folder called 'Atomus', please correct the error and try again.")
-    print("Model to be used in attributes: [Name: Folder name]/[Value: Directory of folder separated with '/']. Ex: (Core) = (script.Core).")
+    print("Model to be used in attributes: [Name: Folder name]/[Value: Directory of folder separated with '/']. Ex: (Core) = (File/Core).")
 end
 
 local function ErroI3()
